@@ -44,16 +44,16 @@ spring.datasource.driver-class-name=org.testcontainers.jdbc.ContainerDatabaseDri
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.hibernate.ddl-auto=update
 ```
-✔ **Ưu điểm**: Không cần viết `BaseTestContainer.java`, Spring Boot tự động nhận diện container PostgreSQL.
-✖ **Nhược điểm**: Không kiểm soát được lifecycle của Testcontainers.
+ **Ưu điểm**: Không cần viết `BaseTestContainer.java`, Spring Boot tự động nhận diện container PostgreSQL.
+ **Nhược điểm**: Không kiểm soát được lifecycle của Testcontainers.
 
 ### Cách 2: Dùng `BaseTestContainer.java`
-✔ **Ưu điểm**:
+ **Ưu điểm**:
 - Kiểm soát được thời gian start/stop của container.
 - Dùng chung cho nhiều test class.
 - Tuỳ chỉnh được thông số của PostgreSQL.
-✖ **Nhược điểm**: Cần thêm code setup.
+ **Nhược điểm**: Cần thêm code setup.
 
-✅ **Khuyến nghị**: Dùng `BaseTestContainer.java` nếu cần kiểm soát test tốt hơn!
+ **Khuyến nghị**: Dùng `BaseTestContainer.java` nếu cần kiểm soát test tốt hơn!
 
 
